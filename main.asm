@@ -391,7 +391,6 @@ shift_array:
 ;* Description: Updates a single digit of the display and increments the 
 ;*  digit_num to the digit position to be displayed next
 ;* 
-;* Author: Omar Mohamed 
 ;* Version: 1.0
 ;* Last updated: 10/24/2022 8:07:30 PM
 ;* Target: AVR128DB48
