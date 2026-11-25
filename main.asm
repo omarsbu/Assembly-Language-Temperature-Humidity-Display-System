@@ -5,7 +5,6 @@
 ;***************************************************************************
 ;*
 ;* Title: Temperature Humidity System
-;* Author: Omar Mohamed
 ;* Version: 1.0
 ;* Last updated: 11/12/2022 
 ;* Target: AVR128DB48
@@ -149,7 +148,7 @@ tca0_ovf_ISR:
 ;* must not exceed 99, since a 2-digit BCD number can only represent 0 - 99.
 ;*  
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
@@ -227,7 +226,7 @@ next:
 ;* Gets most significan digit in 8-bit binary value between 0-99 and leaves 
 ;* the least significant digit is left in the input register
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
@@ -270,7 +269,7 @@ return:
 ;* Transfer contents of bcd_entries array to led_display array in reversed
 ;* order.  
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
@@ -334,7 +333,7 @@ transfer_data:
 ;* Rounds the value on the display to three significant figures by shifting
 ;* led_display array and turning the leftmost digit OFF
 
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-16-2022
 ;* Target:			AVR128DB48
@@ -515,7 +514,7 @@ hextable: .db $01, $4F, $12, $06, $4C, $24, $20, $0F, $00, $04, $08, $60, $31, $
 ;* This subroutine writes a 0 to the DATA line PB0 and leaves the DATA line
 ;* at the logic 0 level
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
@@ -548,7 +547,7 @@ write_0_to_DHT11:
 ;* external pull-up resistor. Can be used to make PB0 function like an open
 ;* drain pin
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
@@ -580,7 +579,7 @@ write_1_to_DHT11:
 ;* This subroutine returns an r16 * 1us delay for AVR128DB48 @ 4.00 MHz
 ;* Return
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
@@ -615,7 +614,7 @@ var_us_delay:
 ;* This subroutine returns an r16 * 0.1ms delay for AVR128DB48 @ 4.00 MHz
 ;* Return
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
@@ -653,7 +652,7 @@ var_ms_delay:
 ;* Description:
 ;* This subroutine returns a 50 microsecond delay for AVR128DB48 @ 4.00 MHz
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
@@ -685,7 +684,7 @@ delay_50us:
 ;* Description:
 ;* This subroutine returns an 18.001 millisecond delay for AVR128DB48 @ 4.00 MHz
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
@@ -717,7 +716,7 @@ delay_18ms:
 ;* Description:
 ;* This subroutine returns a 20 microsecond delay for AVR128DB48 @ 4.00 MHz
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
@@ -752,7 +751,7 @@ delay_20us:
 ;* start signal for the DHT11 to send data. The end of the start signal is a 1 from
 ;* the microcontroller for 20us.
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
@@ -790,7 +789,7 @@ send_start:
 ;* The response from the DHT11  consists of the DHT11 driving the DATA line low 
 ;* for 80us and then high for 80us.
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
@@ -860,7 +859,7 @@ wait_for_response:
 ;* Description:
 ;* Returns the logical value of the DATA line in bit 0 of r16
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
@@ -893,7 +892,7 @@ read_DHT11:
 ;* bit is returned as a byte value in r16 that is 0x00 for a 0 data bit and is 0x01 
 ;* for a 1 data bit.
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
@@ -977,7 +976,7 @@ bit_is_1:
 ;* Description:
 ;* Reads a sequence of eight data bits from the DHT11 and stores it in r18
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
@@ -1022,7 +1021,7 @@ get_byte:
 ;* Perform five byte reads and puts five bytes of data from the DHT11 into the 
 ;* 5 byte array measured_data 
 ;*
-;* Author:			Omar Mohamed
+
 ;* Version:			0.1
 ;* Last updated:		11-13-2022
 ;* Target:			AVR128DB48
